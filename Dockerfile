@@ -8,3 +8,5 @@ COPY index.html /var/www/html/
 EXPOSE 80
 
 VOLUME /var/www/html
+
+CMD ["apache2ctl","-D","FOREGROUND"]
