@@ -1,9 +1,12 @@
 FROM ubuntu:latest
 
-RUN apt update;apt install apache2 -y
+RUN apt update; apt install apache2 -y; apt-get update -y ; useradd pavan
 
-RUN apt-get update -y 
 COPY index.html /var/www/html/
+
+WORKDIR /code
+
+COPY . .
 
 EXPOSE 80
 
